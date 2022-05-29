@@ -8,3 +8,9 @@ const game = {
       (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
   }
 }
+
+prevGuesses = []
+
+function Guess(num) {
+  return prevGuesses.push(num)
+}
