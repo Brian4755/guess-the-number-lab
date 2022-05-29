@@ -15,4 +15,9 @@ function Guess(num) {
   return prevGuesses.push(num)
 }
 
-prompt(`Enter a guess between ${smallestNum} and ${biggestNum}`)
+let getGuess = 0
+while (getGuess !== game.secretNum) {
+  getGuess = prompt(`Enter a guess between ${game.smallestNum} and ${game.biggestNum}`)
+if (getGuess !== game.secretNum) Guess(getGuess)
+alert(`Your past guesses are ${prevGuesses}`)
+}
