@@ -14,3 +14,5 @@ prevGuesses = []
 function Guess(num) {
   return prevGuesses.push(num)
 }
+
+prompt(`Enter a guess between ${smallestNum} and ${biggestNum}`)
