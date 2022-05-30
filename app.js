@@ -6,10 +6,7 @@ const game = {
   prevGuesses: [],
 
   play: function() {
-    console.log('play invoked')
     this.secretNum = Math.floor(Math.random() * (this.biggestNum - this.smallestNum + 1)) + this.smallestNum
-    console.log(this.secretNum)
-    console.log(this.prevGuesses[this.prevGuesses.length -1], 'test')
     while (this.prevGuesses[this.prevGuesses.length -1] !== this.secretNum) {
       this.prevGuesses.push(this.getGuess())
       if (this.prevGuesses[this.prevGuesses.length -1] < this.secretNum) {
@@ -23,7 +20,6 @@ const game = {
     }
   },
   getGuess: function() {
-    console.log('getGuess invoked')
     let guess
     while (!guess || guess < this.smallestNum || guess > this.biggestNum) {
       guess = parseInt(prompt(`Enter a guess between ${this.smallestNum} and ${this.biggestNum}`))
